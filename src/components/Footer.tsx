@@ -99,8 +99,7 @@ export default function Footer() {
           {/* ── Brand ── */}
           <div className={`md:col-span-5 ${isRTL ? 'text-right' : 'text-left'}`}>
             <h2 className="font-heading text-2xl sm:text-3xl font-bold mb-3 sm:mb-4">
-              <span className="text-primary">Quantum</span>
-              <span className="text-foreground"> Home</span>
+              <span className="text-primary">Controlit</span>
             </h2>
             <p className="font-paragraph text-sm sm:text-base text-foreground/60 leading-relaxed mb-5 sm:mb-7 max-w-sm">
               {copy.tagline}
