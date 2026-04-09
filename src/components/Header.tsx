@@ -8,7 +8,7 @@ export default function Header() {
   const [showLanguageMenu, setShowLanguageMenu] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
-  const { theme, toggleTheme } = useTheme();
+  const { theme } = useTheme();
 
   const languages = [
     { code: 'he', name: 'עברית', dir: 'rtl' },
@@ -182,7 +182,7 @@ export default function Header() {
                     transition={{ duration: 0.15, ease: 'easeOut' }}
                     className={`
                       absolute top-[calc(100%+8px)]
-                      left-0
+                      right-0
                       min-w-[148px] py-1.5
                       bg-background/95 backdrop-blur-xl
                       border border-primary/15 rounded-xl overflow-hidden z-50
