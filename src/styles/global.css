@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root,
+:root.dark,
+[data-theme="dark"] {
+  --background: 12 12 18;
+  --foreground: 220 220 230;
+  --primary: 0 191 255;
+  --border: 255 255 255;
+  --color-primary-rgb: var(--primary);
+
+  --glass-bg: rgba(14, 14, 20, 0.65);
+  --glass-border: rgba(255, 255, 255, 0.07);
+  --glass-hover-bg: rgba(0, 191, 255, 0.05);
+  --glass-hover-border: rgba(0, 191, 255, 0.28);
+  --glass-hover-shadow: 0 0 40px rgba(0, 191, 255, 0.1);
+  --input-bg: rgba(255, 255, 255, 0.04);
+  --input-border: rgba(255, 255, 255, 0.1);
+
+  color-scheme: dark;
+}
+
+:root.light,
+[data-theme="light"] {
+  --background: 248 248 252;
+  --foreground: 20 20 30;
+  --primary: 0 160 220;
+  --border: 0 0 0;
+  --color-primary-rgb: var(--primary);
+
+  --glass-bg: rgba(255, 255, 255, 0.8);
+  --glass-border: rgba(0, 0, 0, 0.08);
+  --glass-hover-bg: rgba(0, 160, 220, 0.05);
+  --glass-hover-border: rgba(0, 160, 220, 0.3);
+  --glass-hover-shadow: 0 0 36px rgba(0, 160, 220, 0.12);
+  --input-bg: rgba(255, 255, 255, 0.92);
+  --input-border: rgba(0, 0, 0, 0.12);
+
+  color-scheme: light;
+}
+
+html,
+body {
+  margin: 0;
+  background-color: rgb(var(--background));
+  color: rgb(var(--foreground));
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background: rgb(var(--primary));
+  border-radius: 6px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+::-webkit-scrollbar-thumb:hover { opacity: 0.75; }
+* { scrollbar-color: rgb(var(--primary)) transparent; scrollbar-width: thin; }
+
+.glass-panel {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.glass-card-hover {
+  transition: background 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+}
+.glass-card-hover:hover {
+  background: var(--glass-hover-bg);
+  border-color: var(--glass-hover-border) !important;
+  box-shadow: var(--glass-hover-shadow);
+}
+
+/* Keep white utility classes theme-aware for existing component styles. */
+.border-white\/\[0\.07\] { border-color: rgb(var(--border) / 0.07) !important; }
+.border-white\/\[0\.08\] { border-color: rgb(var(--border) / 0.08) !important; }
+.border-white\/10        { border-color: rgb(var(--border) / 0.10) !important; }
+.border-white\/15        { border-color: rgb(var(--border) / 0.15) !important; }
+.border-white\/20        { border-color: rgb(var(--border) / 0.20) !important; }
+
+.bg-white\/\[0\.04\] { background-color: rgb(var(--border) / 0.04) !important; }
+.bg-white\/5         { background-color: rgb(var(--border) / 0.05) !important; }
+.bg-white\/8         { background-color: rgb(var(--border) / 0.08) !important; }
+.bg-white\/10        { background-color: rgb(var(--border) / 0.10) !important; }
+
+.btn-primary-safe,
+button.btn-primary-safe,
+a.btn-primary-safe {
+  color: #ffffff !important;
+}
+
+.input-themed {
+  background: var(--input-bg) !important;
+  border: 1px solid var(--input-border) !important;
+  color: rgb(var(--foreground)) !important;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.3s ease;
+}
+.input-themed::placeholder {
+  color: rgb(var(--foreground) / 0.38) !important;
+}
+.input-themed:focus {
+  border-color: rgb(var(--primary) / 0.6) !important;
+  box-shadow: 0 0 0 3px rgb(var(--primary) / 0.12) !important;
+  outline: none !important;
+}
