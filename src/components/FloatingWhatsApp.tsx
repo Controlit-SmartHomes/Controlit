@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { MessageCircle } from 'lucide-react';
+import { FaWhatsapp } from "react-icons/fa";
 import { useState } from 'react';
 
 export default function FloatingWhatsApp() {
@@ -21,7 +22,7 @@ export default function FloatingWhatsApp() {
         className="relative w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-[#25D366] from-primary to-primary/80 shadow-lg hover:shadow-[0_0_30px_rgba(0,191,255,0.5)] transition-all duration-300 flex items-center justify-center group"
         aria-label="Chat with us on WhatsApp"
       >
-        <MessageCircle className="w-7 h-7 sm:w-8 sm:h-8 text-white" />
+        <FaWhatsapp className="w-7 h-7 sm:w-8 sm:h-8 text-white" />
         
         {/* Pulse animation */}
         <motion.div

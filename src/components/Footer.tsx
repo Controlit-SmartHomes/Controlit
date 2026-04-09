@@ -1,5 +1,6 @@
 import { Facebook, Instagram, Linkedin, MessageCircle } from 'lucide-react';
 import { useEffect, useState } from 'react';
+import { FaWhatsapp } from 'react-icons/fa';
 
 type Lang = 'he' | 'ar' | 'en' | 'ru';
 
@@ -17,7 +18,7 @@ const t: Record<Lang, {
     quickLinks: 'קישורים מהירים',
     home: 'דף הבית',
     followUs: 'עקבו אחרינו',
-    rights: '© 2026 Controlit. כל הזכויות שמורות.',
+    rights: ' 2026 Controlit © כל הזכויות שמורות',
   },
   ar: {
     tagline: 'رواد في مجال تكامل المنازل الذكية الفاخرة. نحول رؤيتك إلى واقع بتقنية متقدمة وخدمة لا تقبل المساومة.',
@@ -25,7 +26,7 @@ const t: Record<Lang, {
     quickLinks: 'روابط سريعة',
     home: 'الصفحة الرئيسية',
     followUs: 'تابعنا',
-    rights: '© 2026 Controlit. جميع الحقوق محفوظة.',
+    rights: '2026 Controlit © جميع الحقوق محفوظة',
   },
   en: {
     tagline: 'Leaders in luxury smart home integration. We turn your vision into reality with advanced technology and uncompromising service.',
@@ -33,7 +34,7 @@ const t: Record<Lang, {
     quickLinks: 'Quick Links',
     home: 'Home',
     followUs: 'Follow Us',
-    rights: '© 2026 Controlit. All rights reserved.',
+    rights: '2026 Controlit © All rights reserved',
   },
   ru: {
     tagline: 'Лидеры в интеграции умных домов премиум-класса. Мы превращаем ваше видение в реальность с передовыми технологиями и безупречным сервисом.',
@@ -41,7 +42,7 @@ const t: Record<Lang, {
     quickLinks: 'Быстрые ссылки',
     home: 'Главная',
     followUs: 'Следите за нами',
-    rights: '© 2026 Controlit. Все права защищены.',
+    rights: '2026 Controlit © Все права защищены',
   },
 };
 
@@ -120,7 +121,7 @@ export default function Footer() {
                 active:scale-[0.97]
               "
             >
-              <MessageCircle className="w-4 h-4 sm:w-5 sm:h-5 shrink-0" strokeWidth={1.8} />
+              <FaWhatsapp className="w-4 h-4 sm:w-5 sm:h-5 shrink-0" strokeWidth={1.8} />
               {copy.whatsapp}
             </button>
           </div>
