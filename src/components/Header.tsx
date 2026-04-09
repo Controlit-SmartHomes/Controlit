@@ -2,6 +2,7 @@ import { useTheme } from '@/hooks/useTheme';
 import { AnimatePresence, motion } from 'framer-motion';
 import { ChevronDown, Globe, Home, Moon, Sun } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
+import ControlItLogo from './ControlitLogo';
 
 export default function Header() {
   const [language, setLanguage] = useState('he');
@@ -110,20 +111,8 @@ export default function Header() {
             whileHover={{ scale: 1.02 }}
             transition={{ type: 'spring', stiffness: 400, damping: 25 }}
           >
-
-            <div className="
-              w-9 h-9 rounded-xl
-              bg-gradient-to-br from-primary/30 to-primary/10
-              border border-primary/25
-              flex items-center justify-center
-              shadow-[0_0_12px_rgba(var(--color-primary-rgb),0.15)]
-            ">
-              <Home className="w-4 h-4 text-primary" strokeWidth={2} />
-            </div>
-
-
-            <span className="font-heading text-xl font-bold tracking-tight leading-none">
-              <span className="text-primary">Controlit</span>
+            <span className="font-heading font-bold tracking-tight leading-none">
+              <ControlItLogo width={120} height={55} />
             </span>
 
 
