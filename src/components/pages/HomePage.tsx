@@ -398,7 +398,7 @@ export default function HomePage() {
             >
               {/* Primary — always white text on primary bg */}
               <button
-                onClick={() => window.open('https://wa.me/972501234567', '_blank')}
+                onClick={() => window.open('https://wa.me/972508280691', '_blank')}
                 className="btn-primary-safe group inline-flex items-center justify-center gap-3 h-12 sm:h-14 px-6 sm:px-8 bg-primary hover:bg-primary/85 font-heading text-sm sm:text-base font-semibold rounded-xl transition-all duration-300 hover:shadow-[0_0_36px_rgba(0,191,255,0.35)] active:scale-[0.98]"
               >
                 {t.whatsapp as string}

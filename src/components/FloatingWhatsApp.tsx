@@ -14,7 +14,7 @@ export default function FloatingWhatsApp() {
       className="fixed bottom-6 right-6 z-40 sm:bottom-8 sm:right-8"
     >
       <motion.button
-        onClick={() => window.open('https://wa.me/972501234567', '_blank')}
+        onClick={() => window.open('https://wa.me/972508280691', '_blank')}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
         whileHover={{ scale: 1.1 }}

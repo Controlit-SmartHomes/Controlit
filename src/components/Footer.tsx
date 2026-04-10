@@ -106,7 +106,7 @@ export default function Footer() {
               {copy.tagline}
             </p>
             <button
-              onClick={() => window.open('https://wa.me/972501234567', '_blank')}
+              onClick={() => window.open('https://wa.me/972508280691', '_blank')}
               className="
                 inline-flex items-center gap-2.5
                 px-5 py-2.5 rounded-xl

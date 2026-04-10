@@ -44,8 +44,8 @@ export default function Header() {
     window.dispatchEvent(new CustomEvent('languageChange', { detail: code }));
   };
 
-  const scrollToContact = () => {
-    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+  const openWhatsApp = () => {
+    window.open('https://wa.me/972508280691', '_blank');
   };
 
   const t = {
@@ -77,7 +77,7 @@ export default function Header() {
     <nav className="flex items-center gap-2">
       {[
         { lbl: label('services'), onClick: () => window.scrollTo({ top: 0, behavior: 'smooth' }) },
-        { lbl: label('contact'), onClick: scrollToContact },
+        { lbl: label('contact'), onClick: openWhatsApp },
       ].map(({ lbl, onClick }) => (
         <button key={lbl} onClick={onClick} className={`${badgeClass} px-4`}>
           {lbl}
